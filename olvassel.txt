@@ -1,13 +1,17 @@
-A képek a leonardo AI használatával lettek létrehotva.
+Oldal készítője: Villarroel Hektor Salvador
 
-komfortzona.jpg promptja:
-A man emerges from his comfort zone, smashing through a barrier of glass with determination. His outstretched right hand grasps for something unseen. The shattered glass gleams with intricate neon blue and purple hues, reflecting his fractured journey to new horizons. This vividly detailed painting captures the raw emotion of stepping beyond familiar boundaries, portrayed with exquisite skill and rich, vibrant colors that bring the scene to life.
+A weboldal: https://vhsalvador.github.io/webfejlesztes/index.html
 
-futas.jpg promptja:
-Create a dynamic picture where a lean, athletic man with a chiseled physique is sprinting with unbridled energy, his toned legs and arms propelling him forward with each stride. His face is set in a determined expression, with sweat-glistened skin and a focused gaze, his eyebrows furrowed in concentration. The surrounding environment is blurred, with wispy trails of motion lingering behind him, as if the camera's shutter has been left open to capture the fleeting moments of his high-speed movement, akin to a high-exposure photo. His short, dark hair is ruffled, and his attire is a sleek, aerodynamic running suit in a deep, electric blue that contrasts vibrantly with the atmospheric haze surrounding him.
+Weblap témája: Ez a weblap a falmászásról és annak csodálatos világáról szól. Megismerhetsz új falmászó helyeket, és még talán magad is egy kicsit jobban.
 
-kep1.kpg prompt
-A sprawling boulder gym fills the frame with vibrant energy: rich blue walls adorned with a kaleidoscope of colorful holds. The wide-angle photograph captures the bustling activity and creativity of climbers in action, their bodies contorted in mid-air leaps and grips. Each hold glimmers with a glossy sheen, inviting viewers to feel the texture and weight of the rugged terrain. The impeccable clarity and dynamic lighting make this image a masterpiece of immersive sport photography.
+JS kód:	A js kód a melyikvagyte.html-ben található, ami a bevitt adatok alapján megállapítja a falmászói képességed. Ha mekit eszel sajnos azt nem nagyon értékeli, de ha chilisbabot azt annál inkább.
 
-kep2.jpg/kep3.jpg prompt
-"In a fantastical boulder gym where gravity feels like an afterthought, vivid green, red, yellow, and blue climbing holds sparkle like scattered gemstones across towering walls. There is no ceiling—only an infinite expanse of deep velvet-black sky adorned with shimmering stars and luminous constellations that seem almost within reach. A lone climber ascends steadily upward, his silhouette glowing softly under the cosmic light as he pushes himself higher into this celestial dreamscape—a testament to human grit against an otherworldly backdrop."
+Google font:
+https://fonts.google.com/specimen/Oswald
+A címekben használom a betütípust mert úgy gondolom illik a falmászáshoz.
+
+A hamburgermenüt perplexity pro-val magyaráztattam el magamnak, és irattam meg vele. Változtatásokat nem csináltam. Egyszerűen csak tetszik a hambimenü	
+A szöveg GPT-o4-el lett generálva
+A kis slider a tudd meg a szintednél perplexity proval lett elmagyaráztatva. Magabiztos vagyok hogy működését eltudom magyarázni, és értem is.
+
+A favicon: https://www.flaticon.com/free-icon/climbing-holds_12339295
