@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <meta name="author" content="Villarroel Hektor Salvador">
+    <meta name="description" content="Weboldal a falmászás csodás világáról">
+    <script src="script.js"></script>
+    <title>A falmászás csodálatos világa</title>
+    <!--Oswald betu-->
+   
+    <link rel="icon" href="ikon/fogasok.png" type="image/x-icon">
+    <!--Fotalbum-->
+    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick.css">
+    
+   
+    <style type="text/css">
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .slider {
+            width: 80%;
+            min-width: 400px;
+            margin: 100px auto;
+        }
+
+        .slick-slide {
+            margin: 0px 5px;
+        }
+
+        .slick-slide img {
+            width: 100%;
+        }
+
+        .slick-prev:before,
+        .slick-next:before {
+            color: black;
+        }
+
+        .slick-slide {
+            transition: all ease-in-out .3s;
+            opacity: .2;
+        }
+
+        .slick-active {
+            opacity: .5;
+        }
+
+        .slick-current {
+            opacity: 1;
+        }
+
+        /* pottyok, nyillak */
+        .slick-prev:before,
+        .slick-next:before,
+        .slick-dots li button:before {
+            color: white;
+        }
+
+        /*aktiv potty*/
+        .slick-dots li.slick-active button:before {
+            opacity: 1  ;
+        }
+
+        
+        .slick-prev,
+        .slick-next {
+            font-size: 24px;
+            z-index: 1;
+        }
+
+        .slick-prev {
+            left: 10px;
+        }
+
+        .slick-next {
+            right: 10px;
+        }
+
+        /* kepek */
+        .slick-slide img {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        
+        
+    </style>
+    
+    <!--Validáció-->
+    <!--A validáció nem működik valamiért, de más weblapra bemásolva, ugyan azt a könyvtárstruktúrát használva igen. Ellenőriztem mindent, elérési utakat stb de nem működik-->
+    <!--Végül megoldottam. Nem volt jó hogy az albumnál is be volt linkelve a js. Hupsz-->
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="jquery-validation-1.19.5/dist/jquery.validate.min.js"></script>
+    <script>
+    $(document).ready(function () {
+    $.validator.addMethod("dateRange", function(value, element) {
+        var startDate = new Date("2024-12-01");
+        var endDate = new Date("2024-12-31");
+        var inputDate = new Date(value);
+        return inputDate >= startDate && inputDate <= endDate;
+    }, "A dátumnak 2024.12.01 és 2024.12.31 között kell lennie");
+
+    $.validator.addMethod("timeRange", function(value, element) {
+        var startTime = "08:00";
+        var endTime = "16:00";
+        return value >= startTime && value <= endTime;
+    }, "Az időpontnak 8:00 és 16:00 között kell lennie");
+
+    $("#myform").validate({
+        rules: {
+            keresztnev: "required",
+            vezeteknev: "required",
+            nap: {
+                required: true,
+                dateRange: true
+            },
+            idopont: {
+                required: true,
+                timeRange: true
+            },
+            cm: {
+                required: true,
+                number: true,
+                min: 121
+            },
+            falatszereti: {
+                required: true
+            },
+            email: {
+                required: true,
+                email: true
+            },
+            password: {
+                required: true,
+                minlength: 8
+            },
+            elfogad: {
+                required: true
+            }
+        },
+        messages: {
+            keresztnev: "Írd be a keresztneved!",
+            vezeteknev: "Írd be a vezetékneved!",
+            nap: {
+                required: "Válassz egy napot!",
+                dateRange: "A dátumnak 2024.12.01 és 2024.12.31 között kell lennie!"
+            },
+            idopont: {
+                required: "Válassz egy időpontot!",
+                timeRange: "Az időpontnak 8:00 és 16:00 között kell lennie!"
+            },
+            cm: {
+                required: "Add meg a magasságod!",
+                number: "Kérlek, számot adj meg!",
+                min: "A magasságnak 120 cm felett kell lennie!"
+            },
+            falatszereti: "Válassz egy opciót!",
+            email: "Kérlek, valós email címet adj meg!",
+            password: {
+                required: "Add meg a jelszavad!",
+                minlength: "A jelszavad legalább 8 karakter hosszú legyen!"
+            },
+            elfogad: "Kérlek, fogadd el a feltételeinket!"
+             }
+        });
+    });
+    </script>
+
+    <style>
+    label.error {
+    color: #FB3A3A;     
+    }
+    </style>
+
+</head>
+<body>
+    
+    <div class="container">
+
+        <div class="nav_bar">
+            <header>
+                <h1 class="focim">A falmászás csodálatos világa</h1>
+            </header>
+            
+            <nav>
+                <div class="hamburger">
+                    <div class="hamburger_icon" onclick="toggleMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>   
+                    </div>
+                    <ul class="menu-items">
+                        <li><a href="#" class="active">Kezdőlap</a></li>
+                        <li><a href="miertamaszas.html">Miért a falmászás?</a></li>
+                        <li><a href="melyikvagyte.html">Mi a te szinted?</a></li>
+                        <li><a href="holmaszhatsz.html">Népszerű boulderek</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="index1">
+            <div class="div1index">
+                <h2 class="cim">
+                Válaszd te is a falmászást!
+                </h2>
+                <p class="szoveg"> A falmászás több mint sport: egy belső utazás, amely segít felfedezni, mire vagy képes. Ez a tevékenység nem csupán az izmok próbája, hanem a léleké és az elméé is. Minden mozdulat egy újabb lépés a határaid kitolása felé, miközben magabiztosabbá és bátrabbá válsz. Ahogy haladsz felfelé a falon, nemcsak az izmaid erősödnek, hanem a mentális állóképességed is fejlődik. A koncentráció és a fókusz elengedhetetlenek ahhoz, hogy sikeresen teljesítsd a kihívásokat.
+                    A falakon túl a mindennapok kihívásait is könnyebben fogod leküzdeni, hiszen a falmászás során szerzett tapasztalatok és önbizalom átragadnak az élet más területeire is. Megtanulsz bízni önmagadban és abban, hogy képes vagy megoldani a nehéz helyzeteket. Ez a tevékenység nem csupán fizikai kihívást jelent, hanem lehetőséget ad arra is, hogy jobban megismerd önmagad és megtapasztald a belső erőd határait.
+                    A falmászás tehát egy olyan kaland, amely során újra és újra felfedezheted saját képességeidet és kitartásodat. Minden egyes sikeresen megmászott útvonal újabb bizonyíték arra, hogy képes vagy túllépni azokon az akadályokon, amelyeket korábban leküzdhetetlennek hittél. Ezáltal nemcsak fizikai, hanem lelki szinten is gazdagodsz, hiszen minden egyes mászás egy újabb lépés az önismeret útján.
+                </p>
+            </div>
+
+            <div class="div2">
+        
+              
+
+                    <form action="https://rf.uni-corvinus.hu/webfejlesztes/receive.php" method="post" id="myform" novalidate>
+                        <h2>Ingyenes edzés regisztráció</h2>
+                        <p class="urlap"><label for="keresztnev">Keresztnév </label>
+                            <input type="text" name="keresztnev" id="keresztnev">
+                        </p>
+                        <p class="urlap"><label for="vezeteknev">Vezetéknév</label>
+                            <input type="text" name="vezeteknev" id="vezeteknev">
+                        </p>
+                        <p class="urlap"><label for="email">Email cím </label>
+                            <input type="text" name="email" id="email">
+                        </p>
+                        <p class="urlap"> <label for="nap">Melyik nap lenne neked jó?
+                            <input type="date" name="nap" id="nap"></label>
+                        </p>
+
+                        <p class="urlap"> <label for="idopont">Hánykor felel meg neked?
+                            <input type="time" name="idopont" id="idopont"></label>
+                        </p>
+                        <p class="urlap"> <label for="cm">Hány centi magas vagy?
+                            <input type="number" name="cm" id="cm"></label>
+
+                        </p>
+                        <p class="urlap"> <label for="falatszereti">Szereted a falmászást?
+                            Igen<input type="radio" name="falatszereti" value="igen" id="falatszereti">
+                            Nem<input type="radio" name="falatszereti" value="nem" id="falatszereti"></label>
+                        </p>
+                        <p class="urlap"> <label for="elfogad">Elfogadom az
+                        <a href="https://www.youtube.com/watch?v=dqsaivz4aAo" target="_blank">ÁSZF-t</a></label><input type="checkbox" name="elfogad" id="elfogad" value="elfogadom">
+                        </p>
+                        
+                        <p class="urlap"><input type="submit" value="Elküld"></p>
+                    </form>
+
+                   
+            </div>
+        </div>
+        
+        
+        
+            
+        
+        
+            <div class="div4">
+                <section class="center slider">
+                    <div><img src="kepek/kep1.jpg" alt="kep1" title="kepcim1"></div>
+                    <div><img src="kepek/kep2.jpg" alt="kep2" title="kepcim2"></div>
+                    <div><img src="kepek/kep3.jpg" alt="kep3" title="kepcim3"></div>
+                    <div><img src="kepek/kep4.webp" alt="kep4" title="kepcim4"></div>
+                    <div><img src="kepek/kep5.jpg" alt="kep5" title="kepcim5"></div>
+                    <div><img src="kepek/kep6.jpg" alt="kep6" title="kepcim6"></div>
+                    <div><img src="kepek/kep7.jpg" alt="kep7" title="kepcim7"></div>
+                </section>
+        
+            </div>
+        
+        <footer class="footer"> 
+            <div class="focim"><p class="footerszoveg">Az oldal tanulmányi jellegű</p></div>
+            <div class="focim"><p class="footerszoveg">Készítette: Villarroel Hektor Salvador</p></div>
+        </footer>
+
+        <!--Fotoalbum-->
+
+        <!--Volt js helye amit feljebb raktam-->
+        <script src="slick-1.8.1/slick/slick.js" type="text/javascript" charset="utf-8"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            $(".center").slick({
+                dots: true,
+                infinite: true,
+                centerMode: true,
+                centerPadding: '60px',
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: false,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            arrows: false,
+                            centerPadding: '60px',
+                            slidesToShow: 3
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            arrows: false,
+                            centerPadding: '60px',
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+
+
+        });
+    </script>
+    </div>
+</body>
+</html>

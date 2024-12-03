@@ -1,0 +1,13 @@
+A képek a leonardo AI használatával lettek létrehotva.
+
+komfortzona.jpg promptja:
+A man emerges from his comfort zone, smashing through a barrier of glass with determination. His outstretched right hand grasps for something unseen. The shattered glass gleams with intricate neon blue and purple hues, reflecting his fractured journey to new horizons. This vividly detailed painting captures the raw emotion of stepping beyond familiar boundaries, portrayed with exquisite skill and rich, vibrant colors that bring the scene to life.
+
+futas.jpg promptja:
+Create a dynamic picture where a lean, athletic man with a chiseled physique is sprinting with unbridled energy, his toned legs and arms propelling him forward with each stride. His face is set in a determined expression, with sweat-glistened skin and a focused gaze, his eyebrows furrowed in concentration. The surrounding environment is blurred, with wispy trails of motion lingering behind him, as if the camera's shutter has been left open to capture the fleeting moments of his high-speed movement, akin to a high-exposure photo. His short, dark hair is ruffled, and his attire is a sleek, aerodynamic running suit in a deep, electric blue that contrasts vibrantly with the atmospheric haze surrounding him.
+
+kep1.kpg prompt
+A sprawling boulder gym fills the frame with vibrant energy: rich blue walls adorned with a kaleidoscope of colorful holds. The wide-angle photograph captures the bustling activity and creativity of climbers in action, their bodies contorted in mid-air leaps and grips. Each hold glimmers with a glossy sheen, inviting viewers to feel the texture and weight of the rugged terrain. The impeccable clarity and dynamic lighting make this image a masterpiece of immersive sport photography.
+
+kep2.jpg/kep3.jpg prompt
+"In a fantastical boulder gym where gravity feels like an afterthought, vivid green, red, yellow, and blue climbing holds sparkle like scattered gemstones across towering walls. There is no ceiling—only an infinite expanse of deep velvet-black sky adorned with shimmering stars and luminous constellations that seem almost within reach. A lone climber ascends steadily upward, his silhouette glowing softly under the cosmic light as he pushes himself higher into this celestial dreamscape—a testament to human grit against an otherworldly backdrop."

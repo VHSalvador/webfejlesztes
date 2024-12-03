@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Villarroel Hektor Salvador">
+    <meta name="description" content="Weboldal a falmászás csodás világáról">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Mi a te szinted?</title>
+    <!--Oswald betu-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Warang+Citi&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <!--Open Sans betu-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Warang+Citi&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="icon" href="ikon/fogasok.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+
+        <div class="nav_bar">
+            <header>
+                <h1 class="focim">Mi a te szinted?</h1>
+            </header>
+            <nav>
+                <div class="hamburger">
+                    <div class="hamburger_icon" onclick="toggleMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>   
+                    </div>
+                    <ul class="menu-items">
+                        <li><a href="index.html" >Kezdőlap</a></li>
+                        <li><a href="miertamaszas.html" >Miért a falmászás?</a></li>
+                        <li><a href="#" class="active">Mi a te szinted?</a></li>
+                        <li><a href="holmaszhatsz.html">Népszerű boulderek</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <div class="div1">
+            <h2 class="cim">
+                Tudd meg milyen ügyes vagy!
+            </h2>
+            <p class="szoveg"> 
+                <img src="weblapkepek/kepes.jpg" alt="Egy büszke falmászó, a naplementét csodálja a hegy tetejéről" class="tuddmegmilyenugyeskep"> 
+                Szeretnéd pontosan megérteni, milyen szinten állsz egy adott területen? Tesztünk segít abban, hogy reális képet kapj a tudásodról és az erősségeidről. Ez a szintfelmérő nem csupán egyszerű kérdések sorozata, hanem egy átfogó eszköz, amely végigvezet a legfontosabb témákon és aspektusokon, amelyek az adott területhez kapcsolódnak. A kérdések gondosan lettek összeállítva annak érdekében, hogy átfogó képet adjanak a jelenlegi képességeidről és tudásodról.
+Az eredményed alapján megmutatjuk, hogy kezdő, haladó vagy profi szinten állsz-e. Ez nemcsak egy címke, hanem egy útmutató is arra vonatkozóan, hogy mely területeken van lehetőséged a fejlődésre. Ne feledd, a szintfelmérés nem verseny, hanem lehetőség: a cél az, hogy fejlődni tudj, és megtaláld a következő lépést az utadon. Minden szint új kihívásokat és tanulási lehetőségeket kínál, amelyek segítenek abban, hogy tovább növeld a készségeidet és elmélyítsd a tudásodat.
+Töltsd ki a tesztet, és használd az eredményt iránymutatásként! Az eredmények segítségével pontosabban láthatod majd, hol tartasz jelenleg, és milyen irányba érdemes tovább haladnod. Akár új célokat is kitűzhetsz magad elé az eredmények alapján, amelyek motivációt adhatnak a további fejlődéshez. Ne feledd: minden lépés előre visz az utadon!
+             </p>
+            
+        </div>
+
+        <div class="kerdoives">
+            <article>
+                <h3 class="cim">Tudd meg a szinted!</h3>
+                <form action="https://rf.uni-corvinus.hu/webfejlesztes/receive.php" method="post" class="kerdoiv">
+                <table class="tablazat">
+                   
+                    <tr>
+                        <td>
+                            <b>Másztál már falat?</b> <br>
+                            Igen<input type="radio" name="masztale" id="igen" value="igen" ><br>
+                            Nem<input type="radio" name="masztale" id="nem" value="nem">
+                        </td>
+                        <td>
+                            <b>Hány fekvőtámaszt tudsz csinálni?</b> <br>
+                            <input type="number" name="fekvodb" id="fekvotamasz" class="fekvo">
+                        </td>
+                        <td>
+                            <b>Az alábbiak közül ismered valamelyik helyet?</b> <br>
+                            <select name="helyek" id="helyvalaszto" class="valaszt" >
+                                <option value="Gravity Boulder">Gravity Boulder</option>
+                                <option value="Flow Boulder" >Flow Boulder</option>
+                                <option value="Boulder Academy Budapest" >Boulder Academy Budapest</option>
+                                <option value="Mountex Boulder" >Mountex Boulder</option>
+                                <option value="Spider Club" >Spider Club</option>
+                            </select>
+                        </td>
+                    </tr> 
+                    <tr>
+                        <td>
+                            <b>Mit szoktál enni?</b> <br>
+                            McDonald's<input type="checkbox" name="meki" id="meki"><br>
+                            Tojásrántotta <input type="checkbox" name="rantotta" id="rantotta"><br>
+                            Chilis bab <input type="checkbox" name="chilis" id="chilis"><br>
+                            Spenót<input type="checkbox" name="spenot" id="spenot"><br>
+                        </td>
+                        <td>
+                            <b>Hánykor kelsz? </b><br>
+                            <input type="time" name="ido" id="ido">
+                        </td>
+                        <td>
+                            <b>Mikor születtél?</b> <br>
+                            <input type="date" name="szul" id="szul">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <b>Hány km-t tudsz futni?</b><br>
+                            <input type="range" name="futas" id="futas" min="0" max="10" value="2" step="1">
+                            <span id="rangeValue">2</span>
+                            <script>
+                                const range = document.getElementById('futas');
+                                const value = document.getElementById('rangeValue');
+                                range.oninput = function() {
+                                  value.textContent = this.value;
+                                }
+                                
+                            </script>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <input type="submit" name="kuldes" id="kuldes">
+                        </td>
+                    </tr>
+                    
+                </table>
+                </form> 
+            </article>
+        </div>
+    
+        <footer class="footer"> 
+            <div class="focim"><p class="footerszoveg">Az oldal tanulmányi jellegű</p></div>
+            <div class="focim"><p class="footerszoveg">Készítette: Villarroel Hektor Salvador</p></div>
+        </footer>
+
+    </div>
+</body>
+</html>
