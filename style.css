@@ -156,7 +156,7 @@
     .tuddmegmilyenugyeskep{
         
         max-width: 20vw;
-        height: 15%;
+        max-height: 20vw;
         float: right;
         margin: 10px;
     }
